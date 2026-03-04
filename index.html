@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css bootstrap -->
     <!-- <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css"> -->
     <!-- css main -->
@@ -12,420 +12,276 @@
     <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>My Profile & Portfolio</title>
-</head>
-<body class="bg-gray-200">
+  </head>
+  <body class="bg-gray-200">
     <!-- Header -->
-    <header class="pb-6 bg-white lg:pb-0">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <!-- lg+ -->
-            <nav class="flex items-center justify-between h-16 lg:h-20">
-                <div class="flex-shrink-0">
-                    <a href="#" title="" class="flex">
-                        <img class="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
-                    </a>
-                </div>
-    
-                <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-                    <!-- Menu open: "hidden", Menu closed: "block" -->
-                    <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-                    </svg>
-    
-                    <!-- Menu open: "block", Menu closed: "hidden" -->
-                    <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-    
-                <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> MyHome </a>
-    
-                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Profile </a>
-    
-                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Portfolio </a>
-    
-                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
-                </div>
-    
-                <a href="#" title="" class="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button"> Get started now </a>
-            </nav>
-    
-            <!-- xs to lg -->
-            <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
-                <div class="flow-root">
-                    <div class="flex flex-col px-6 -my-2 space-y-1">
-                        <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> MyHome </a>
-    
-                        <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Profile </a>
-    
-                        <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Portfolio </a>
-    
-                        <a href="#" title="" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
-                    </div>
-                </div>
-    
-                <div class="px-6 mt-6">
-                    <a href="#" title="" class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700" role="button"> Get started now </a>
-                </div>
-            </nav>
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between h-16 lg:h-20">
+          <!-- LOGO -->
+          <a href="#" class="flex items-center space-x-2">
+            <img
+              src="images/logo.png"
+              class="h-8 lg:h-10"
+              alt="Hafizzudin Logo"
+            />
+          </a>
+
+          <!-- DESKTOP MENU -->
+          <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- RIGHT BUTTONS -->
+          <div class="flex items-center space-x-4">
+            <!-- DARK MODE TOGGLE -->
+            <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200">
+              🌙
+            </button>
+
+            <a
+              href="#contact"
+              class="hidden lg:inline-flex px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700"
+            >
+              Hire Me
+            </a>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+              id="menu-btn"
+              class="lg:hidden p-2 rounded-md hover:bg-gray-200"
+            >
+              ☰
+            </button>
+          </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-4">
+          <div class="flex flex-col space-y-3 mt-4">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#portfolio" class="mobile-link">Portfolio</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+          </div>
         </div>
+      </div>
     </header>
-    
 
     <main>
-        <section class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
-            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div class="grid items-center grid-cols-1 md:grid-cols-2">
-                    <div>
-                        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Hey 👋 I am <br class="block sm:hidden" />Hafizzudin</h2>
-                        <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">Hey there. My name is Hafizzudin Sifaulloh and I’m currently living in Malang. My skills include, but are not limited to: Front-end Development, PHP, and Flutter.</p>
-        
-                        <p class="mt-4 text-xl text-gray-600 md:mt-8">
-                            <span class="relative inline-block">
-                                <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300"></span>
-                                <span class="relative"> Have a question? </span>
-                            </span>
-                            <br class="block sm:hidden" />Ask me on <a href="https://www.instagram.com/h_zdn04/" title="" class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Instagram</a>
-                        </p>
-                    </div>
-        
-                    <div class="relative">
-                        <img class="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg" alt="" />
-        
-                        <img class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" style="width: 1125; height: 1576;" src="images/pp1.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </section>
-   
-
-    <!-- Home -->
-    <!-- <section class="home bd-grid" id="home">
-        <div class="home__data">
-            <h1 class="home__title">Hi, <br>I'am <span class="home__title-color">Hafizzudin</span><br> Web Designer</h1>
-            <a href="#contact" class="button">Contact</a>
-        </div>
-
-        <div class="home__social">
-            <a href="#" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-            <a href="#" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-            <a href="#" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-        </div>
-        <div class="home__img">
-            <img src="images/icon porto.png" alt="">
-        </div>
-    </section> -->
-
-    <!-- About -->
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
-                <div class="relative lg:mb-12">
-                    <img class="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg" alt="" />
-                    <div class="pl-12 pr-6">
-                        <img class="relative" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/girl-working-on-laptop.jpg" alt="" />
-                    </div>
-                    <div class="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-                        <div class="max-w-xs bg-blue-600 rounded-lg sm:max-w-md xl:max-w-md">
-                            <div class="px-3 py-4 sm:px-5 sm:py-8">
-                                <div class="flex items-start">
-                                    <p class="text-3xl sm:text-4xl">👋</p>
-                                    <blockquote class="ml-5">
-                                        <p class="text-sm font-medium text-white sm:text-lg">“You made it so simple. My new site is so much faster and easier to work with than my old site.”</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="2xl:pl-16">
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">We make things easy for projects.</h2>
-                    <p class="text-xl leading-relaxed text-gray-900 mt-9">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim velit mollit. Exercitation veniam.</p>
-                    <p class="mt-6 text-xl leading-relaxed text-gray-900">Velit officia conse duis enim velit mollit. Exercit ation veniam consequat sunt nostrud amet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
-        <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-            <div class="grid items-center grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-20">
-                <div class="">
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Grow business with Celebration.</h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-    
-                <div class="relative pl-20 pr-6 sm:pl-6 md:px-0">
-                    <div class="relative w-full max-w-xs mt-4 mb-10 ml-auto">
-                        <img class="ml-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/person.jpg" alt="" />
-    
-                        <img class="absolute -top-4 -left-12" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/1/wavey-lines.svg" alt="" />
-    
-                        <div class="absolute -bottom-10 -left-16">
-                            <div class="bg-yellow-300">
-                                <div class="px-8 py-10">
-                                    <span class="block text-4xl font-bold text-black lg:text-5xl"> 53% </span>
-                                    <span class="block mt-2 text-base leading-tight text-black"> High Conversions<br />Everything </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
-        <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-            <div class="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
-                <div class="pr-12 sm:pr-0">
-                    <div class="relative max-w-xs mb-12">
-                        <img class="object-bottom rounded-md" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/4/man-eating-noodles.jpg" alt="" />
-    
-                        <img class="absolute origin-bottom-right scale-75 rounded-md -bottom-12 -right-12" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/4/smiling-businessman.jpg" alt="" />
-                    </div>
-                </div>
-    
-                <div>
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Grow business with Celebration.</h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- <section class="about section" id="about">
-        <h2 class="section-title">
-            About
-        </h2>
-        <div class="about__container bd-grid">
-            <div class="about__img">
-                <img src="images/foto_mhs.jpg" alt="">
-            </div>
-            <div>
-                <h2 class="about__subtitle">I'am Hafizzudin</h2>
-                <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, officia deleniti qui nesciunt commodi animi perferendis nisi. Numquam iusto aliquid nam dicta perferendis nisi nostrum vitae delectus, repellendus corrupti ex.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Portfolio -->
-    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl">Trusted by world class companies, design teams & popular designers</h2>
-            </div>
-    
-            <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-3 gap-x-6">
-                <div class="md:px-4 lg:px-10">
-                    <img class="-rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/team.jpg" alt="" />
-                    <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Join as a team</h3>
-                    <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-                </div>
-    
-                <div class="md:px-4 lg:px-10">
-                    <img class="rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/work.jpg" alt="" />
-                    <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Work from anywhere</h3>
-                    <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-                </div>
-    
-                <div class="md:px-4 lg:px-10">
-                    <img class="-rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/success.jpg" alt="" />
-                    <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Get success</h3>
-                    <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- MySkill -->
-    <!-- <section class="skills section" id="skills">
-        <h2 class="section-title">My Skills</h2>
-        <div class="skills__container bd-grid">
-            <div>
-                <h2 class="skills__subtitle">Profesional Skill</h2>
-                <p class="skills__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eum veniam non asperiores deleniti 
-                </p>
-                <div class="skills__data">
-                    <div class="skills__names">
-                        <i class='bx bxl-html5 skills__icon'></i>
-                        <span class="skills__name">HTML & CSS</span>
-                    </div>
-                </div>
-                <div class="skills__data">
-                    <div class="skills__names">
-                        <i class='bx bxl-figma skills__icon' ></i>
-                        <span class="skills__name">Figma Design</span>
-                    </div>
-                </div>
-                <div class="skills__data">
-                    <div class="skills__names">
-                        <i class='bx bxl-javascript skills__icon' ></i>
-                        <span class="skills__name">javascript</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img src="images/skills.jpg" alt="" class="skills__img">
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contact -->
-    <section class="pt-10 pb-8 overflow-hidden bg-gray-100 sm:pt-16 lg:pt-24">
+      <!-- HERO -->
+      <section
+        id="home"
+        class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16"
+      >
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Connect with all apps</h2>
-                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+          <div class="grid items-center grid-cols-1 md:grid-cols-2">
+            <div>
+              <h2
+                class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl"
+              >
+                Hey 👋 I am <br class="block sm:hidden" />Hafizzudin
+              </h2>
+              <p
+                class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8"
+              >
+                Hey there. My name is Hafizzudin Sifaulloh and I’m currently
+                living in Malang. My skills include, but are not limited to:
+                Front-end Development, PHP, and Flutter.
+              </p>
+
+              <p class="mt-4 text-xl text-gray-600 md:mt-8">
+                <span class="relative inline-block">
+                  <span
+                    class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300"
+                  ></span>
+                  <span class="relative"> Have a question? </span>
+                </span>
+                <br class="block sm:hidden" />Ask me on
                 <a
-                    href="#"
-                    title=""
-                    class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-gray-900 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
-                    role="button"
+                  href="https://www.instagram.com/h_zdn04/"
+                  title=""
+                  class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline"
+                  >Instagram</a
                 >
-                    Check all apps
-                </a>
+              </p>
             </div>
-        </div>
-    
-        <img class="w-full min-w-full mx-auto mt-12 scale-150 max-w-7xl lg:min-w-0 lg:mt-0 lg:scale-100" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/1/services-icons.png" alt="" />
-    </section>
-    
-    <!-- <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact__container bd-grid">
-            <form action="#" class="contact__form" method="post">
-                <input type="text" placeholder="Name" class="contact__input">
-                <input type="mail" placeholder="Email" class="contact__input">
-                <textarea name="" id="" cols="30" rows="10" class="contact__input"></textarea>
-                <input type="button" value="Kirim" class="contact__button button">
-            </form>
-        </div>
-    </section> -->
 
-    <!-- Footer -->
-   
-    <section class="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-                <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-                    <img class="w-auto h-9" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
-    
-                    <p class="text-base leading-relaxed text-gray-600 mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-    
-                    <ul class="flex items-center space-x-3 mt-9">
-                        <li>
-                            <a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
-                                    ></path>
-                                </svg>
-                            </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
-                                </svg>
-                            </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
-                                    <circle cx="16.806" cy="7.207" r="1.078"></circle>
-                                    <path
-                                        d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
-                                    ></path>
-                                </svg>
-                            </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
-                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
-                                    ></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div>
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
-    
-                    <ul class="mt-6 space-y-4">
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Features </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Works </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Career </a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div>
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Help</p>
-    
-                    <ul class="mt-6 space-y-4">
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Customer Support </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Delivery Details </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Privacy Policy </a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-                    <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
-    
-                    <form action="#" method="POST" class="mt-6">
-                        <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email" class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
-                        </div>
-    
-                        <button type="submit" class="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700">Subscribe</button>
-                    </form>
-                </div>
+            <div class="relative">
+              <img
+                class="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
+                src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
+                alt=""
+              />
+
+              <img
+                class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110"
+                style="width: 1125; height: 1576"
+                src="images/pp1.png"
+                alt=""
+              />
             </div>
-    
-            <hr class="mt-16 mb-10 border-gray-200" />
-    
-            <p class="text-sm text-center text-gray-600">© Copyright 2021, All Rights Reserved by Postcraft</p>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-16 bg-white">
+        <div class="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-800">About Me</h2>
+
+              <p class="mt-6 text-gray-600 leading-relaxed">
+                I am a passionate developer with experience in building company
+                profile websites, dashboards, asset management systems, payment
+                integrations, and mobile applications.
+              </p>
+
+              <p class="mt-4 text-gray-600 leading-relaxed">
+                My main stack includes:
+              </p>
+
+              <ul class="mt-4 space-y-2 text-gray-700">
+                <li>✔ Laravel 11/12 + Inertia.js</li>
+                <li>✔ React + TypeScript</li>
+                <li>✔ Flutter Mobile Apps</li>
+                <li>✔ REST API & Firebase Integration</li>
+                <li>✔ Git, GitHub, Deployment & CI/CD</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="p-8 bg-blue-50 rounded-lg">
+                <h3 class="text-xl font-semibold text-blue-600">
+                  What I Focus On
+                </h3>
+
+                <p class="mt-4 text-gray-700">
+                  Building clean UI, scalable backend systems, and
+                  performance-optimized applications that solve real business
+                  problems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-16 bg-red-50">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-gray-800">
+            Technical Skills
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8 mt-12 text-center">
+            <div class="p-6 bg-white rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-600">Frontend</h3>
+              <p class="mt-4 text-gray-600">
+                React.js, TypeScript, TailwindCSS, Bootstrap
+              </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-600">Backend</h3>
+              <p class="mt-4 text-gray-600">
+                Laravel, REST API, MySQL, Authentication, Role Permission
+              </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-600">Mobile</h3>
+              <p class="mt-4 text-gray-600">
+                Flutter, Firebase, API Integration
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-gray-800">
+            My Recent Projects
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div
+              class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition"
+            >
+              <h3 class="text-xl font-semibold">Asset Management System</h3>
+              <p class="mt-4 text-gray-600">
+                Built with Laravel + Inertia + React. Includes role permissions,
+                reporting, and dashboard analytics.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition"
+            >
+              <h3 class="text-xl font-semibold">Company Profile Website</h3>
+              <p class="mt-4 text-gray-600">
+                SEO optimized website built with Next.js integrated with
+                WordPress CMS.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition"
+            >
+              <h3 class="text-xl font-semibold">Mobile Donation App</h3>
+              <p class="mt-4 text-gray-600">
+                Flutter app integrated with API and payment gateway.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-16 bg-gray-100">
+        <div class="max-w-3xl mx-auto text-center px-4">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Let's Work Together 🚀
+          </h2>
+
+          <p class="mt-6 text-gray-600">
+            Interested in working together or have a project in mind? Feel free
+            to reach out!
+          </p>
+
+          <div class="mt-8 space-x-4">
+            <a
+              href="mailto:your@email.com"
+              class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
+              Send Email
+            </a>
+
+            <a
+              href="https://github.com/yourusername"
+              class="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-200"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+      <p class="text-sm text-gray-600 text-center py-4">
+        © 2026 Hafizzudin Sifaulloh —
+        <a href="pages/term.html" class="text-blue-600 hover:underline">
+          Terms & Conditions
+        </a>
+      </p>
+    </main>
     <!-- Scroll Reveal -->
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <!-- javascript -->
     <!-- <script src="scripts/main.js"></script> -->
-</body>
+  </body>
 </html>

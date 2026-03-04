@@ -50,3 +50,24 @@ sr.reveal('.skills__img',{delay: 400})
 
 // Skill Contact
 sr.reveal('.contact__input',{delay: 200})
+
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+// CLOSE MOBILE MENU AFTER CLICK
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
+
+// DARK MODE TOGGLE
+const toggleBtn = document.getElementById("theme-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+});
